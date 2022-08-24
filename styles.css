@@ -1,0 +1,554 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root{
+    --body-color:#efefef;
+    --nav-color:#1876f2;
+    --bg-color: #fff;
+}
+.dark-theme{
+    --body-color:#000;
+    --nav-color:#000;
+    --bg-color: #000;
+}
+body{
+    background: var(--bg-color);
+}
+/*.............. NAVIGATION BAR............. */
+nav{
+    background: var(--nav-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+.nav-left , .nav-right{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 150px;
+    margin-right: 30px;
+}
+.nav-left ul li{
+    list-style: none;
+    display: inline-block;
+}
+.nav-left ul li img{
+    width: 28px;
+    margin: 0 20px;
+}
+.nav-right .search-bar{
+    width: 300px;
+    height:35px;
+    background:  #efefef;;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 10px;
+    margin-right:20px;
+}
+.nav-right .search{
+    width:20px;
+    margin-left: 10px;
+
+}
+.nav-right input{
+    background: transparent;
+    flex: 1;
+    border:0;
+    outline: none;
+    padding: 10px;
+}
+.profile img{
+    width:40px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content: '';
+    background: #41db51;
+    position:absolute;
+    top: 0;
+    border: 2px solid #fff;
+    right: 4px;
+    width:7px;
+    height: 7px;
+    border-radius: 50%;
+
+}
+/* .................BODY................ */
+.container {
+    display: flex     ;
+    padding: 13px 5%;
+    justify-content: space-between;
+     
+}
+  
+.left-sidebar {
+    width: 25%; 
+    position: sticky;
+    top: 40px;
+    align-self:  flex-start;
+}
+.right-sidebar {
+    width: 25%;
+    position: sticky;
+    top: 40px;
+    align-self:  flex-start;
+} 
+.main-content {
+    width: 47%; 
+}
+/* ....................lEFT-SIDEBAR................... */
+.links a, .shortcut a{
+    text-decoration:  none ;
+    align-items: center;
+    display: flex;
+    gap:0.5rem;
+    padding: 15px 0;
+    color: #626262;
+    width: fit-content;
+    
+}
+.links a img{
+    width:20px;
+}
+.links a:last-child{
+    color: #1876f2;
+}
+.links{
+    border-bottom: 1px solid #ccc;
+}
+.shortcut h4{
+    color: #626262;
+    padding: 15px 0;
+    font-family: 'poppins', sans-serif;
+    font-weight: 300;
+}
+.shortcut img{
+    width:40px;
+    border-radius: 4px;
+}
+.shortcut{
+    padding-bottom: 20px;
+}
+/*.................... RIGHT SIDEBAR................ */
+.right-sidebar{
+    background: var(--bg-color);
+    padding: 20px 30px;
+    color: #626262;
+}
+.sidebar-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar-title h4{
+    font-family: 'poppins', sans-serif;
+    font-weight:300px;
+    color:#626262;
+    
+}
+.sidebar-title a{
+    font-family: 'poppins', sans-serif;
+    font-size: 13px;
+    color:#1876f2;
+    text-decoration:none;
+}
+.Event{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom:20px;
+}
+.Event a{
+    font-size: 12px;
+    text-decoration: none;
+    color:#1876f2
+}
+.Event p{
+    font-size: 12px;
+}
+.Event h4{
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+}
+.right-sidebar h4{
+    font-weight: 600;
+    font-size: 16px;
+    color: #626262;
+}
+.left-event{
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    width:65px;
+    height:65x;
+    padding: 20px 0;
+    margin-right: 15px;
+    overflow: hidden;
+    position: relative;
+    align-items: center ;
+}
+.left-event span{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background: #1876f2;
+    color: #fff;
+    font-size:10px;
+    padding:4px 0;
+    text-align: center;
+    align-items: center;
+}
+.advert img{
+    width:100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.online-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.online-list .online img{
+    width:50px;
+    border-radius: 50%;
+}
+.online-list .online{
+    width:40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.online-list .online::after{
+    top: unset;
+    bottom: 4px;
+    left:35px;
+}
+/* ..........................MAIN CONTENT................. */
+
+/*.... STATUS STORY...... */
+.story{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.story-image{
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5)), url(images/status-1.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-basis:18%;
+    padding-top: 32%;
+    border-radius: 10px;
+}
+.story2{
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5)), url(images/status-2.png); 
+}
+.story3{
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5)), url(images/status-3.png); 
+}
+.story4{
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5)), url(images/status-4.png); 
+}
+.story5{
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5)), url(images/status-5.png); 
+}
+.story-image  img{
+    width: 45px;
+    position: absolute;
+    align-items: center;
+    top: 7px;
+    left:3px; 
+    border-radius: 50%;
+    border: 5px solid #1876f2;
+}
+.story-image p{
+    text-align: center;
+    color:#fff;
+    font-size: 14px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.story-image.story1 img{
+    position: absolute;
+    top: 60%;
+    left:30px;
+    border: 0;
+    width: 35px;
+}
+/*........... SECOND SECTION IN THE MAIN CONTENT...... */
+.Write-post-container {
+    align-items: center;
+    width:100%;
+    background: var(--bg-color);
+    padding: 20px;
+    color: #626262;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.Write-post-container .profile img{
+    width:50px;
+    border-radius: 50% ;
+}
+.profile p {
+    margin-bottom: 1px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #626262;
+    
+}
+
+select {
+    width: 80%;
+    max-width: 60px;
+    padding: -1px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 0;
+    color: #626262;
+    
+}
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: #777;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+    border: 0;
+}
+select,
+.select:after {
+  grid-area: select;
+  border: 0;
+  outline: 0;
+}
+select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+}
+
+/*..TEXT AREA..  */
+.yourmind-post{
+    padding-left: 65px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.yourmind-post textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize:none;
+}
+.yourmind-post-links{
+    display:flex;
+    margin-top: 10px;
+    /* margin-left: 3px;  */
+    gap: 1rem;
+}
+.yourmind-post-links a {
+    font-size: 12px;
+    text-decoration: none;
+    color:#626262;
+    display: flex;
+    align-items: center;
+    /* margin-right: 30px; */
+}
+.yourmind-post-links a img{
+    width: 20px;
+    align-items: center;
+    margin-right: 5px;
+}
+/* .........THIRD SECTION OF THE MAIN CONTENT..........  */
+.post-container{
+    padding: 20px;
+    width: 100%;
+    background: var(--bg-color); 
+    align-items: center;
+    color: #626262;
+    margin: 20px 0;
+    position: relative;
+    border-radius: 6px;
+}
+.post-container .profile img{
+    width:50px;
+    border-radius: 50% ;
+}
+.post-container .profile small{
+    font-size: 13px;
+    color: #9a9a9a;
+}
+.post-container .profile i{
+    font-size: 15px;
+    color: #626262;
+    position: absolute;
+    top:40px;
+    right:20px;
+    align-items: center;
+    text-align: center;
+}
+.post-text{
+    color:#9a9a9a;
+    margin: 15px 0;
+    font-size: 15px;
+}
+.post-img{
+    width:100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.post-row {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+}
+.social-activity .post img{
+    width:18px;
+    margin-right:10px;
+}
+.social-activity .post{
+    display: inline-flex;
+    margin-right: 20px;
+    align-items: center;
+}
+.post-profile-icon img{
+    width:20px;
+    border-radius: 50%;
+    margin-left: 280px;
+}
+.post-profile-icon .fa-caret-down{
+    font-size: 12px;
+    margin-top: -10px;
+    vertical-align: middle;
+}
+.load-more{
+    border: 1px solid #9a9a9a;
+    cursor:pointer;
+    margin:auto;
+    display: block;
+    color: #626262;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    background: transparent;
+}
+.footer{
+    text-align: center;
+    color: #9a9a9a;
+    padding: 10px 0 20px;
+    font-size: 13px;
+}
+/* ............DROP-DOWN MENU............. */
+.setting-menu{
+    position: absolute;
+    width:50%;
+    max-width: 300px;
+    background: var(--bg-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius:4px;
+    overflow:hidden;
+    top: 108%;
+    right: 20px;
+    max-height: 0;
+    transition: max-height 0.3s;
+}
+.setting-menu-height{
+    max-height: 450px;
+}
+.setting-menu p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.setting-menu-inner{
+    padding: 20px;
+}
+.setting-menu .profile a{
+    color: #1876f2;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top:-4px; 
+}
+.setting-menu hr{
+    border: 1px solid #ccc;
+    margin:15px 0;
+}
+.setting-list{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.setting-list .setting-icon{
+    width:30px;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+.setting-list a{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 15px;
+    color: #626262;
+    
+}
+.setting-list  .arrow{
+    width: 10px;
+}
+/* ............... TOGGLE BUTTON .................... */
+#toggle{
+    position: absolute;
+    top:20px;
+    right:20px;
+    background: #ccc;
+    width:45px;
+    border-radius: 15px;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 0.3s, background 0.3s;
+
+}
+#toggle span{
+    width:18px;
+    height:18px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+
+
+}
+#toggle.dark-btn-on{
+    padding-left: 23px;
+    background: #0a0a0a;
+}
